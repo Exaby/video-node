@@ -10,7 +10,7 @@ http
         '<meta name="viewport" content="width=device-width; height=device-height;"></meta>' +
         '<link rel="shortcut icon" href="https://cdn.spco.xyz/assets/img/home/favicon.png"></link>' +
         "<title>" +
-        req.url.substring(1) +
+        req.url.substring(7) +
         "</title>" +
         '<link rel="stylesheet" href="https://spco.xyz/video/c/videocontrols.css" />' +
         "<link" +
@@ -33,12 +33,12 @@ http
         '<meta property="og:video:width" content="1280" />' +
         '<meta property="og:video:height" content="720" />' +
         '<meta property="og:video:url" content="' +
-        req.url.substring(1) +
+        req.url.substring(7) +
         '" />' +
         "</head>" +
         "<body>" +
         '<video controls="controls" autoplay="autoplay" loop="" src="' +
-        req.url.substring(1) +
+        req.url.substring(7) +
         '" poster="" height="100%%"></video>' +
         "</body>" +
         "</html>"
