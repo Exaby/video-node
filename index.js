@@ -9,22 +9,20 @@ http
         '<meta charset="UTF-8">' +
         '<meta name="viewport" content="width=device-width; height=device-height;"></meta>' +
         '<link rel="shortcut icon" href="https://cdn.spco.xyz/assets/img/home/favicon.png"></link>' +
-        '<link rel="stylesheet" href="https://spco.xyz/video/c/videocontrols.css" />' +
+        '<link rel="stylesheet" href="https://cdn.spco.xyz/video/c/videocontrols.css" />' +
         "<link" +
         '  rel="stylesheet"' +
-        '  href="https://spco.xyz/video/c/TopLevelVideoDocument.css"' +
+        '  href="https://cdn.spco.xyz/video/c/TopLevelVideoDocument.css"' +
         "/>" +
         "<link" +
         '  rel="stylesheet"' +
-        '  href="https://spco.xyz/video/c/BottomLevelVideoDocument.css"' +
+        '  href="https://cdn.spco.xyz/video/c/BottomLevelVideoDocument.css"' +
         "/>" +
         "<script" +
         '  type="text/javascript"' +
-        '  src="https://spco.xyz/video/j/TopLevelVideoDocument.js"' +
+        '  src="https://cdn.spco.xyz/video/j/TopLevelVideoDocument.js"' +
         "></script>" +
-
-        "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">"+
-
+        '<meta http-equiv="content-type" content="text/html; charset=UTF-8">' +
         '<meta property="og:type" content="video.other" />' +
         '<meta property="og:video:url" content="' +
         req.url.substring(7) +
