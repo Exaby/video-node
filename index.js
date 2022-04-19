@@ -9,9 +9,6 @@ http
         '<meta charset="UTF-8">' +
         '<meta name="viewport" content="width=device-width; height=device-height;"></meta>' +
         '<link rel="shortcut icon" href="https://cdn.spco.xyz/assets/img/home/favicon.png"></link>' +
-        "<title>" +
-        req.url.substring(7) +
-        "</title>" +
         '<link rel="stylesheet" href="https://spco.xyz/video/c/videocontrols.css" />' +
         "<link" +
         '  rel="stylesheet"' +
@@ -25,16 +22,15 @@ http
         '  type="text/javascript"' +
         '  src="https://spco.xyz/video/j/TopLevelVideoDocument.js"' +
         "></script>" +
-        "<meta" +
-        '  name="description"' +
-        '  content="HTML5 Video Player From Mozilla On Every Browser"' +
-        "/>" +
+
+        "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">"+
+
         '<meta property="og:type" content="video.other" />' +
-        '<meta property="og:video:width" content="1280" />' +
-        '<meta property="og:video:height" content="720" />' +
         '<meta property="og:video:url" content="' +
         req.url.substring(7) +
         '" />' +
+        '<meta property="og:video:width" content="1280" />' +
+        '<meta property="og:video:height" content="720" />' +
         "</head>" +
         "<body>" +
         '<video controls="controls" autoplay="autoplay" loop="" src="' +
