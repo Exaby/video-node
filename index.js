@@ -1,7 +1,15 @@
 var http = require("http");
+var url = require("url");
 http
   .createServer(function (req, res) {
     res.writeHead(200, { "Content-Type": "text/html" });
+    let vidpos;
+    if (url.parse(req.url, true).query.img == "") {
+      vidpos = "https://cdn.spco.xyz/assets/img/imagedoc-darknoise.png";
+    } else {
+      vidpos = url.parse(req.url, true).query.img;
+    }
+    let vidsrc = url.parse(req.url, true).query.url;
     res.write(
       '<html lang="en">' +
         "<head>" +
@@ -23,17 +31,22 @@ http
         '  src="https://cdn.spco.xyz/video/j/TopLevelVideoDocument.js"' +
         "></script>" +
         '<meta http-equiv="content-type" content="text/html; charset=UTF-8">' +
+        '<meta property="og:image" content="' +
+        vidpos +
+        '">' +
         '<meta property="og:type" content="video.other" />' +
         '<meta property="og:video:url" content="' +
-        req.url.substring(7) +
+        vidsrc +
         '" />' +
         '<meta property="og:video:width" content="1280" />' +
         '<meta property="og:video:height" content="720" />' +
         "</head>" +
         "<body>" +
         '<video controls="controls" autoplay="autoplay" loop="" src="' +
-        req.url.substring(7) +
-        '" poster="" height="100%%"></video>' +
+        vidsrc +
+        '" poster="' +
+        vidpos +
+        '" height="100%%"></video>' +
         "</body>" +
         "</html>"
     );
